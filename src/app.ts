@@ -8,9 +8,11 @@ app.use(express.json())
 const add = (a: number, b: number): number => a + b
 
 app.get('/', (_req, res) => {
-  const result = add(2, 2)
-  res.send(`2 plus 2 is ${result}`)
+  const a = 2
+  const b = 2
+  const result = add(a, b)
+  res.json({ message: `${a} plus ${b} is ${result}` })
 })
 
-const PORT = 3000
-app.listen(3000, () => console.log(`Server running on port ${PORT}`))
+const PORT = 3001
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

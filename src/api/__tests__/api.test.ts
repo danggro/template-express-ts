@@ -1,3 +1,3 @@
-it('just checking', () => {
-  expect(true).toBe(true)
-})
+it("just checking", () => {
+  expect(true).toBe(true);
+});
